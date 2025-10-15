@@ -10,6 +10,45 @@
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color-scheme: light;
 }
+.header img {
+  width: 320px;
+  height: 320px;
+  border-radius: 40%;
+  border: 4px solid #00bcd4;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Skill cards */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 450;
+  font-size: 1.0rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.col-6 {
+  flex: 0 0 30%;
+}
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:#0f172a;line-height:1.5}
@@ -23,7 +62,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:#0f172a;line-height:1.5}
 .nav-toggle{display:none;background:none;border:1px solid transparent;font-size:1.25rem}
 
 /* Hero */
-.hero{background:linear-gradient(180deg, rgba(79,70,229,0.06), transparent);border-radius:16px;padding:2rem;margin:1rem 0}
+.hero{display: flex;background:linear-gradient(180deg, rgba(79,70,229,0.06), transparent);border-radius:16px;padding:2rem;margin:1rem 0}
 .hero-inner{display:flex;flex-direction:column;gap:0.5rem}
 .hero h1{margin:0;font-size:2rem}
 .tagline{color:var(--muted);margin:0}
