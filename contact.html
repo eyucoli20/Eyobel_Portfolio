@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Eyobel G. Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Portfolio of Eyobel G. — Contact">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Eyobel Gebremichael</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="open navigation">☰</button>
+  </div>
+</header>
+
+<main class="container main-content">
+  
+<section>
+  <h2>Contact</h2>
+  <p>If you'd like to work together or ask a question, reach out:</p>
+
+  <form class="contact-form" action="mailto:eyucoli19@gmail.com" method="post" enctype="text/plain">
+    <label>
+      Your name
+      <input type="text" name="name" required>
+    </label>
+    <label>
+      Your email
+      <input type="email" name="email" required>
+    </label>
+    <label>
+      Message
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+    <p><button type="submit" class="button">Send</button></p>
+  </form>
+
+  <p class="alt-contact">Or email directly: <a href="mailto:eyucoli19@gmail.com">eyucoli19@gmail.com</a></p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Eyobel G. — Built with ❤️ · <a href="index.html">Portfolio</a></p>
+  </div>
+</footer>
+
+<script>
+/* Mobile nav toggle */
+const btn = document.querySelector('.nav-toggle');
+const navEl = document.querySelector('.nav');
+btn.addEventListener('click', ()=> {
+  navEl.classList.toggle('open');
+});
+</script>
+</body>
+</html>
