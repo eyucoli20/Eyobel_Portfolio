@@ -1,0 +1,123 @@
+
+/* styles.css — responsive, separate file */
+:root{
+  --max-width: 1100px;
+  --accent: #4f46e5;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+.header img {
+  width: 320px;
+  height: 320px;
+  border-radius: 40%;
+  border: 4px solid #00bcd4;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Skill cards */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 450;
+  font-size: 1.0rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.col-6 {
+  flex: 0 0 30%;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:#0f172a;line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+.logo{font-weight:700;text-decoration:none;color:inherit;font-size:1.1rem}
+.nav{display:flex;gap:0.5rem;align-items:center}
+.nav a{padding:0.5rem 0.75rem;text-decoration:none;color:inherit;border-radius:8px}
+.nav a:hover{background:rgba(15,23,42,0.04)}
+.cta{background:var(--accent);color:white;padding:0.5rem 0.8rem;border-radius:8px}
+.nav-toggle{display:none;background:none;border:1px solid transparent;font-size:1.25rem}
+
+/* Hero */
+.hero{display: flex;background:linear-gradient(180deg, rgba(79,70,229,0.06), transparent);border-radius:16px;padding:2rem;margin:1rem 0}
+.hero-inner{display:flex;flex-direction:column;gap:0.5rem}
+.hero h1{margin:0;font-size:2rem}
+.tagline{color:var(--muted);margin:0}
+.button{display:inline-block;padding:0.6rem 1rem;border-radius:10px;text-decoration:none;border:none;background:var(--accent);color:white}
+.button.ghost{background:transparent;border:1px solid rgba(15,23,42,0.08);color:inherit}
+.quick-links{display:flex;gap:1rem;list-style:none;padding:0;margin-top:0.75rem}
+.quick-links li{color:var(--muted);font-size:0.95rem}
+
+/* Grid previews */
+.preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0}
+.preview-grid article{background:white;padding:1rem;border-radius:12px;box-shadow:0 4px 10px rgba(2,6,23,0.04)}
+
+/* Sections */
+.main-content section{background:white;padding:1rem;border-radius:12px;margin:1rem 0;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.bullets{list-style:disc;margin-left:1rem}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.project-card{padding:0.75rem;border-radius:10px;background:linear-gradient(180deg, rgba(15,23,42,0.02), transparent)}
+/* Project images: larger and responsive */
+.project-card img{
+  width:480px;
+  height:300px;
+  object-fit:cover;
+  border-radius:12px;
+  display:block;
+  margin-top:0.25rem;
+}
+
+@media (max-width:700px){
+  .project-card img{width:120px;height:120px}
+}
+.job .meta{color:var(--muted);font-size:0.9rem}
+
+/* Contact form */
+.contact-form{display:grid;gap:0.5rem}
+.contact-form label{display:flex;flex-direction:column;font-size:0.95rem}
+.contact-form input, .contact-form textarea{padding:0.6rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06)}
+
+/* Footer */
+.site-footer{margin-top:2rem;padding:1rem 0;color:var(--muted);font-size:0.95rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .preview-grid{grid-template-columns:1fr 1fr}
+  .skills-grid,.projects-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:700px){
+  .header-inner{gap:0.5rem}
+  .nav{position:absolute;right:1rem;top:60px;background:white;padding:0.5rem;border-radius:8px;box-shadow:0 6px 20px rgba(2,6,23,0.08);flex-direction:column;display:none}
+  .nav.open{display:flex}
+  .nav-toggle{display:block}
+  .preview-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.6rem}
+}
+
+/* Small helpers */
+/* meta[content]{}  */
